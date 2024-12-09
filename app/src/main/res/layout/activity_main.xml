@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="REGISTER"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="@+id/register"
+        app:layout_constraintStart_toStartOf="@+id/register"
+        app:layout_constraintTop_toBottomOf="@+id/register">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Username"
+            android:textColorHint="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Email"
+            android:textColorHint="@color/white"
+            android:textSize="28sp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Password"
+            android:textSize="28sp"
+            android:textColorHint="@color/white"
+             />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button"
+        android:text="NEXT"
+        android:textColor="@color/green"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/layout"
+        app:layout_constraintStart_toStartOf="@+id/layout"
+        app:layout_constraintTop_toBottomOf="@+id/layout"
+
+        />
+
+    <TextView
+        android:id="@+id/trivia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Trivia"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="@id/trivia"
+        app:layout_constraintEnd_toEndOf="@id/trivia"
+        android:src="@drawable/owl"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <ImageView
+        android:src="@drawable/baseline_arrow_back_24"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
